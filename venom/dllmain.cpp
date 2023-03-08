@@ -7,9 +7,6 @@
 #include <windows.h>
 
 void on_injected() noexcept {
-	console::setup();
-	console::print<console::color::red>("venom, growtopia cheat by cmc\n\n");
-
 	try {
 		gt::setup();
 		menu::setup();
