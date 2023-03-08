@@ -80,7 +80,10 @@ void gt::setup() {
 
 	if (!patch_integrity_check())
 		throw std::runtime_error("failed to patch integrity check");
-
+	
+	console::setup();
+	console::print<console::color::red>("venom, growtopia cheat by cmc\n\n");
+	
 	print_good("patched integrity check");
 
 	find_addresses();
