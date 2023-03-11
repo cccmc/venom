@@ -2,6 +2,7 @@
 #include <menu/menu.hpp>
 #include <game/gt.hpp>
 #include <external/minhook/include/MinHook.h>
+#include <external/proton/variant2.hpp>
 #include <utils/console.hpp>
 #include <utils/memory.hpp>
 
