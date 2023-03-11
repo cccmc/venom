@@ -111,6 +111,17 @@ void hooks::send_packet_raw_hook(net_message_type type, const void* data, std::i
 
 void hooks::process_tank_update_packet_hook(game_logic_component_t* _this, game_packet_t* packet) {
 
+	switch (packet->type)
+	{
+		case game_packet_type::call_function:
+		{
+			variantlist_t varlist{};
+			if (varlist.serialize_from_mem(packet->get_extra_data()))
+			{
+				console::println<console::color::dark_yellow>(std::format("varlist: {}", varlist.print()));
+			}
+		}break;
+	}
 	gt::process_tank_update_packet(_this, packet);
 }
 
